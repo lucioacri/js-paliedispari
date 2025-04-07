@@ -9,7 +9,7 @@ function isEvenNumber(value) {
 }
 
 // genero numero random da 1 a 5 con funzione
-function getRandonNumber(max) {
+function getRandomNumber(max) {
   return Math.floor(Math.random() * max) + 1;
 }
 
@@ -25,7 +25,7 @@ console.log(sumChoice);
 const numberChoice = parseInt(prompt("Scegli un numero da 1 a 5", "3"));
 console.log(numberChoice);
 
-const pcNumberFive = getRandonNumber(5);
+const pcNumberFive = getRandomNumber(5);
 console.log(pcNumberFive);
 
 // sommo i due numeri
@@ -36,8 +36,8 @@ const isSumEven = isEvenNumber(sum); // Invocazione di funzione
 
 // dichiaro chi ha vinto
 if (
-  (sumChoice === "pari" && even === true) ||
-  (sumChoice === "dispari" && even === false)
+  (sumChoice === "pari" && isSumEven === true) ||
+  (sumChoice === "dispari" && isSumEven === false)
 ) {
   alert("Hai vinto!");
 } else {
